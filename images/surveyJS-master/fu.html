@@ -1,0 +1,31 @@
+<html>
+
+
+<link href="https://cdn.jsdelivr.net/gh/simplysayhi/surveyJS/dist/survey.min.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.jsdelivr.net/gh/simplysayhi/formJS@3/dist/formjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/simplysayhi/surveyJS/dist/surveyjs.min.js"></script>
+<head>
+<script src="https://cdn.polyfill.io/v3/polyfill.min.js?features=Array.from,Element.prototype.closest,Element.prototype.matches,Promise,Promise.prototype.finally,AbortController,fetch"></script>
+
+
+</head>
+<body>
+<div class="surveyjs-container" data-surveyjs-container>
+    <form action="page.jsp" name="surveyjs-form" class="surveyjs-form" data-surveyjs-form novalidate>
+        <div class="surveyjs-body questionsList clearfix" data-surveyjs-body></div>
+        <div class="surveyjs-footer">
+            <button type="submit">SEND</button>
+        </div>
+    </form>
+</div>
+
+</body>
+
+<script>var formEl = document.querySelector('[data-surveyjs-form]');
+var options = { url: 'json/survey.json' };
+var mySurvey = new Survey( formEl, options );
+mySurvey.init().then(function( response ){
+    console.log('SURVEY DATA RETRIEVED', response);
+});</script>
+
+</html>
