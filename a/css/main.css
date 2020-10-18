@@ -135,8 +135,8 @@ textarea:-ms-input-placeholder { color: #adadad;}
 /*---------------------------------------------*/
 button {
 	outline: none !important;
-	border: none;
-	background: transparent;
+	border: #230379;
+	background: #230379;
 }
 
 button:hover {
@@ -151,7 +151,7 @@ iframe {
 /*---------------------------------------------*/
 .container {
 	max-width: 1200px;
-background-image: url(images/bg-01.jpg);
+background-image: url(../images/logo.png);
 }
 
 
